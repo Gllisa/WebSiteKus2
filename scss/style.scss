@@ -1,14 +1,22 @@
-$color-text-cup: rgb(71, 65, 65);
-$background-cup: #ffd6d6;
+$color-text-cup-light: white;
+$color-text-cup: black;
+$background-cup: #68b0ab;
+$background-cup-contact: #361500;
+$background-cup-sqwad: #fdceb9;
 $background-header: rgb(255, 255, 255);
-
+$background-banner-educ: #7897ab;
 $background-banner: #ededed;
 
 $background-footer: #f5f5f5;
 $color-text-simle: #8ea9ec;
-$background-cool: #ffd9ca;
+$background-cool: #655d8a;
 $color-text-dark: rgb(0, 0, 0);
 $color-text-light: rgb(253, 253, 253);
+
+.page__title_gr {
+  background-color: $background-cup;
+}
+
 .header {
   position: fixed;
   background-color: $background-header;
@@ -79,6 +87,9 @@ $color-text-light: rgb(253, 253, 253);
     text-decoration: none;
     color: black;
   }
+  .header__link:hover {
+    border-bottom: 1px solid black;
+  }
   .header__link-button {
     border: none;
     background-color: transparent;
@@ -93,10 +104,10 @@ $color-text-light: rgb(253, 253, 253);
 }
 
 .page__opennig-logo {
-  background-color: $background-cup;
+  background-color: $background-cup-sqwad;
   .page__title {
     font-size: 120px;
-    color: $color-text-cup;
+    color: $color-text-cup-light;
   }
   .page__container {
     max-width: 1600px;
@@ -105,6 +116,49 @@ $color-text-light: rgb(253, 253, 253);
     padding-bottom: 100px;
   }
 }
+
+.page__opennig-logo_new {
+  background-color: $background-cup;
+  .page__title_new {
+    font-size: 120px;
+    color: $color-text-cup-light;
+  }
+  .page__container_new {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 180px;
+    padding-bottom: 100px;
+  }
+}
+
+.page__opennig-logo_ne {
+  background-color: #b1c5f5;
+  .page__title_ne {
+    font-size: 120px;
+    color: $color-text-cup-light;
+  }
+  .page__container_ne {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 180px;
+    padding-bottom: 100px;
+  }
+}
+
+.page__opennig-logo_n {
+  background-color: $background-cup-contact;
+  .page__title_n {
+    font-size: 120px;
+    color: $color-text-cup-light;
+  }
+  .page__container_n {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 180px;
+    padding-bottom: 100px;
+  }
+}
+
 .open-info {
   margin-top: 100px;
 
@@ -136,25 +190,35 @@ $color-text-light: rgb(253, 253, 253);
   .services__header-width {
     display: flex;
     justify-content: center;
+    padding-bottom: 300px;
   }
   .services__header {
     width: 600px;
-    color: $color-text-cup;
+    color: $color-text-cup-light;
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
     padding-bottom: 50px;
   }
+  .services__anime-block {
+    position: relative;
+  }
+  .services__anime-photo {
+    width: 600px;
+    position: absolute;
+    top: 46%;
+    left: 32%;
+  }
 }
 
 .main__block-history {
   margin-bottom: 100px;
-  margin-top: 250px;
+  margin-top: 450px;
   padding-top: 50px;
   padding-bottom: 100px;
   background-color: $background-cup;
   .block-history__header {
-    color: $color-text-cup;
+    color: $color-text-cup-light;
     font-size: 96px;
     text-align: center;
   }
@@ -164,7 +228,7 @@ $color-text-light: rgb(253, 253, 253);
   }
 
   .block-history__item {
-    border: 2px solid $color-text-cup;
+    border: 2px solid $color-text-cup-light;
     border-radius: 5%;
     margin: 10px;
   }
@@ -175,13 +239,14 @@ $color-text-light: rgb(253, 253, 253);
   .block-history__paragraph {
     text-align: center;
     padding-bottom: 25px;
+    color: $color-text-cup-light;
   }
   .date-history {
     font-size: 64px;
-    color: $color-text-cup;
+    color: $color-text-cup-light;
   }
   .item-info-p-history {
-    color: $color-text-cup;
+    color: $color-text-cup-light;
   }
 }
 
@@ -290,16 +355,22 @@ $color-text-light: rgb(253, 253, 253);
 }
 .cool-box {
   background-color: $background-cool;
-  padding-top: 142px;
-  padding-bottom: 100px;
+
   .cool-box__container {
     max-width: 1600px;
     margin: 0 auto;
+    height: 400px;
   }
   .cool-box__parag {
     font-size: 64px;
     max-width: 1340px;
     font-weight: 500;
+    color: $color-text-light;
+  }
+  .cool-box__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
 }
 
@@ -653,7 +724,7 @@ $color-text-light: rgb(253, 253, 253);
 
 .contact-box {
   height: 100vh;
-  background-color: $color-text-simle;
+  background-color: $background-cup-contact;
   .contact-box__container {
     width: 1600px;
     margin: 0 auto;
@@ -681,7 +752,8 @@ $color-text-light: rgb(253, 253, 253);
     color: $color-text-light;
   }
   .contact-box__item-parag {
-    font-weight: 400;
+    color: $color-text-light;
+    font-weight: 500;
     font-size: 18px;
   }
 }
@@ -698,4 +770,23 @@ $color-text-light: rgb(253, 253, 253);
   opacity: 1;
   transition: all 1.5s;
   transform: translateY(0%);
+}
+
+.item-1:hover,
+.item-2:hover,
+.item-3:hover,
+.item-4:hover,
+.item-5:hover,
+.item-6:hover {
+  color: $color-text-light;
+  transition: 1s linear;
+}
+.item-1:not(:hover),
+.item-2:not(:hover),
+.item-3:not(:hover),
+.item-4:not(:hover),
+.item-5:not(:hover),
+.item-6:not(:hover) {
+  color: $color-text-dark;
+  transition: 1s linear;
 }
