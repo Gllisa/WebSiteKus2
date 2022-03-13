@@ -1,6 +1,9 @@
 $color-text-cup: rgb(71, 65, 65);
 $background-cup: #ffd6d6;
 $background-header: rgb(255, 255, 255);
+
+$background-banner: #ededed;
+
 $background-footer: #f5f5f5;
 $color-text-simle: #8ea9ec;
 $background-cool: #ffd9ca;
@@ -30,6 +33,47 @@ $color-text-light: rgb(253, 253, 253);
   .header__list {
     display: flex;
     margin: 0;
+  }
+  .header__menu-title {
+    font-size: 28px;
+    color: $color-text-dark;
+    text-decoration: none;
+  }
+  .header__menu-title:hover {
+    color: blue;
+    text-decoration: underline;
+    transition: 0.2s linear;
+  }
+  .header__menu {
+    position: relative;
+  }
+  .header__menu_mod {
+    position: absolute;
+    top: 80px;
+    background-color: $background-header;
+    width: 100%;
+  }
+
+  .header__item_start-animation {
+    visibility: visible;
+    transition: opacity 1s;
+    opacity: 1;
+  }
+  .header__item_end-animation {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .header__menu-container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .header__menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 260px;
+    justify-content: space-around;
   }
   .header__link {
     text-decoration: none;
@@ -213,8 +257,9 @@ $color-text-light: rgb(253, 253, 253);
 .hello-banner {
   background-image: url(../img/logo_new.jpg);
   background-repeat: no-repeat;
-  background-color: $background-footer;
-  background-position: right center;
+  background-color: $background-banner;
+  background-position: center 50px;
+  background-size: 750px;
   .container {
     max-width: 1600px;
   }
@@ -228,8 +273,12 @@ $color-text-light: rgb(253, 253, 253);
   .hello-banner__text {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
+    padding-bottom: 64px;
+  }
+  .hello-banner__parag {
+    align-self: flex-end;
   }
   .arrow-button {
     border: none;
@@ -242,7 +291,7 @@ $color-text-light: rgb(253, 253, 253);
 .cool-box {
   background-color: $background-cool;
   padding-top: 142px;
-  padding-bottom: 142px;
+  padding-bottom: 100px;
   .cool-box__container {
     max-width: 1600px;
     margin: 0 auto;
@@ -254,6 +303,64 @@ $color-text-light: rgb(253, 253, 253);
   }
 }
 
+.anime-section-main {
+  margin-top: 64px;
+  background-image: url(../img/top.PNG);
+
+  background-repeat: repeat;
+  background-size: 1800px;
+  height: 200px;
+  animation: anime-left 15s linear infinite;
+}
+.anime-section-center {
+  margin-top: 32px;
+  background-image: url(../img/center.PNG);
+  background-size: 1800px;
+  height: 200px;
+  animation: anime-right 15s linear infinite;
+}
+.anime-section-low {
+  margin-top: 32px;
+  background-image: url(../img/bottom.PNG);
+  background-size: 1800px;
+  height: 200px;
+  animation: anime-left 15s linear infinite;
+}
+@keyframes anime-right {
+  0% {
+    background-position: 0;
+  }
+  25% {
+    background-position: -350px;
+  }
+  50% {
+    background-position: -700px;
+  }
+  75% {
+    background-position: -1050px;
+  }
+  100% {
+    background-position: -1500px;
+  }
+}
+
+@keyframes anime-left {
+  0% {
+    background-position: 0;
+  }
+  25% {
+    background-position: 350px;
+  }
+  50% {
+    background-position: 700px;
+  }
+  75% {
+    background-position: 1050px;
+  }
+  100% {
+    background-position: 1500px;
+  }
+}
 .directions-box {
   max-width: 1600px;
   margin: 0 auto;
@@ -513,17 +620,34 @@ $color-text-light: rgb(253, 253, 253);
     flex-wrap: wrap;
   }
   .branch-box__item {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(0, 0, 0);
     margin: 20px;
     display: flex;
     flex-direction: column;
   }
+  .branch-box__item:hover .branch__image {
+    transform: scale(1.05);
+    transition: 0.5s linear;
+  }
+
+  .branch-box__item:not(:hover) .branch__image {
+    transform: scale(1);
+    transition: 0.5s linear;
+  }
+
+  .branch-box__item:hover .branch__button-arrow {
+    transform: translateX(310px) translateY(-30px) rotate(270deg);
+    transition: 0.5s linear;
+  }
+
+  .branch-box__item:not(:hover) .branch__button-arrow {
+    transform: translateX(300px) translateY(-30px) rotate(270deg);
+    transition: 0.5s linear;
+  }
+
   .branch-box__title {
     max-width: 295px;
     padding: 20px;
-  }
-  .branch__button-arrow {
-    transform: translateX(300px) translateY(-30px) rotate(270deg);
   }
 }
 
@@ -564,4 +688,14 @@ $color-text-light: rgb(253, 253, 253);
 
 .footer_no-margin {
   margin: 0;
+}
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.element-show {
+  opacity: 1;
+  transition: all 1.5s;
+  transform: translateY(0%);
 }
