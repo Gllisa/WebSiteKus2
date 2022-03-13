@@ -201,7 +201,7 @@
 .main__services .services__header-width {
   display: flex;
   justify-content: center;
-  padding-bottom: 300px;
+  padding-bottom: 120px;
 }
 
 .main__services .services__header {
@@ -213,15 +213,9 @@
   padding-bottom: 50px;
 }
 
-.main__services .services__anime-block {
-  position: relative;
-}
-
 .main__services .services__anime-photo {
-  width: 600px;
-  position: absolute;
-  top: 46%;
-  left: 32%;
+  width: 800px;
+  margin-left: 25%;
 }
 
 .main__block-history {

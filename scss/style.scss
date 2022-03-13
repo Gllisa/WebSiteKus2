@@ -190,7 +190,7 @@ $color-text-light: rgb(253, 253, 253);
   .services__header-width {
     display: flex;
     justify-content: center;
-    padding-bottom: 300px;
+    padding-bottom: 120px;
   }
   .services__header {
     width: 600px;
@@ -200,14 +200,10 @@ $color-text-light: rgb(253, 253, 253);
     margin-top: 50px;
     padding-bottom: 50px;
   }
-  .services__anime-block {
-    position: relative;
-  }
+
   .services__anime-photo {
-    width: 600px;
-    position: absolute;
-    top: 46%;
-    left: 32%;
+    width: 800px;
+    margin-left: 25%;
   }
 }
 
