@@ -201,7 +201,15 @@
 .main__services .services__header-width {
   display: flex;
   justify-content: center;
-  padding-bottom: 120px;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 64px;
+}
+
+.main__services .services__parag {
+  font-weight: 500;
+  color: #fdfdfd;
+  font-size: 18px;
 }
 
 .main__services .services__header {
@@ -219,8 +227,7 @@
 }
 
 .main__block-history {
-  margin-bottom: 100px;
-  margin-top: 450px;
+  margin-top: 150px;
   padding-top: 50px;
   padding-bottom: 100px;
   background-color: #68b0ab;
@@ -239,8 +246,9 @@
 
 .main__block-history .block-history__item {
   border: 2px solid white;
-  border-radius: 5%;
+  border-radius: 20px;
   margin: 10px;
+  width: 300px;
 }
 
 .main__block-history .block-history__container {
@@ -250,6 +258,7 @@
 
 .main__block-history .block-history__paragraph {
   text-align: center;
+  text-decoration: underline;
   padding-bottom: 25px;
   color: white;
 }
@@ -265,6 +274,7 @@
 
 .main__block-fact {
   margin: 0 auto;
+  margin-top: 150px;
   max-width: 1600px;
 }
 
